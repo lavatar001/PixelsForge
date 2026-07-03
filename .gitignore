@@ -1,5 +1,7 @@
 *.py
 *.png
+!favicon*.png
+!icon.png
 *.jpg
 *.jpeg
 *.zip
