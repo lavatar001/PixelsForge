@@ -1,0 +1,12 @@
+*.py
+*.png
+*.jpg
+*.jpeg
+*.zip
+*.json
+*.js
+*.css
+__pycache__/
+Fjalla_One/
+html_pdf_tools.html
+html_tools_13_20.html

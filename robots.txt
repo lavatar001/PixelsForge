@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pixelsforge.cc/sitemap.xml

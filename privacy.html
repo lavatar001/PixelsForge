@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — PixelForge</title>
+  <meta name="description" content="Learn how PixelForge protects your privacy with 100% client-side browser processing and zero server uploads.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pixelsforge.cc/privacy.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Google+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-TODO-REPLACE-WITH-PUBLISHER-ID" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg-primary: #0C0F18;
+      --bg-surface: #111520;
+      --bg-card: #161B2C;
+      --bg-card-hover: #1C2338;
+      --bg-input: #0E1220;
+      --border: rgba(255, 255, 255, 0.06);
+      --border-hover: rgba(255, 255, 255, 0.14);
+      --border-active: rgba(99, 179, 237, 0.5);
+      --accent: #3B82F6;
+      --accent-hover: #60A5FA;
+      --accent-glow: rgba(59, 130, 246, 0.2);
+      --accent-subtle: rgba(59, 130, 246, 0.08);
+      --text-primary: #EDF2FF;
+      --text-secondary: #8896B3;
+      --text-muted: #4A5468;
+      --success: #10B981;
+      --warning: #F59E0B;
+      --danger: #EF4444;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: 'Google Sans', sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Fjalla One', sans-serif;
+      color: #FFF;
+      letter-spacing: -0.01em;
+    }
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--accent-hover); }
+    
+    /* Header / Nav */
+    header {
+      background: rgba(12, 15, 24, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 1rem 2rem;
+    }
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-family: 'Fjalla One', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #FFF;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { color: var(--text-secondary); font-weight: 500; }
+    .nav-links a:hover { color: #FFF; }
+    .btn {
+      background: var(--accent);
+      color: #FFF;
+      padding: 0.6rem 1.4rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn:hover { background: var(--accent-hover); color: #FFF; }
+    
+    /* Main Content */
+    main {
+      flex: 1;
+      max-width: 760px;
+      margin: 3rem auto 5rem;
+      padding: 0 1.5rem;
+      width: 100%;
+    }
+    .page-title {
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .page-subtitle {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+    }
+    .content-block { margin-bottom: 2rem; }
+    .content-block h2 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      color: #FFF;
+    }
+    .content-block h3 {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+    .content-block p {
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    .content-block ul {
+      margin: 0.5rem 0 1.2rem 1.5rem;
+      color: var(--text-secondary);
+    }
+    .content-block li { margin-bottom: 0.5rem; }
+    
+    /* Forms */
+    form {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 2rem;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+    input, textarea {
+      background: var(--bg-input);
+      border: 1px solid var(--border);
+      color: var(--text-primary);
+      padding: 0.85rem 1rem;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1rem;
+      width: 100%;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border);
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+      margin-top: auto;
+    }
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-family: 'Fjalla One', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #FFF;
+      margin-bottom: 0.5rem;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    .footer-links a:hover { color: #FFF; }
+    .footer-muted {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="24" height="24" rx="6" fill="var(--accent)"/>
+          <path d="M12 6L6 12L12 18L18 12L12 6Z" fill="#FFF"/>
+        </svg>
+        PixelForge
+      </a>
+      <div class="nav-links">
+        <a href="index.html#tools">Tools</a>
+        <a href="blog.html">Blog & Guides</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="index.html" class="btn">Try Free</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <h1 class="page-title">Privacy Policy</h1>
+    <p class="page-subtitle">Effective Date: TODO: date (e.g., July 1, 2026)</p>
+    
+    <div class="content-block">
+      <h2>1. Who We Are</h2>
+      <p>Welcome to PixelForge (accessible via <code>https://pixelsforge.cc</code>). We provide a suite of free, high-performance web-based image and document utilities designed to operate natively within your web browser. If you have any questions or concerns regarding this Privacy Policy or our data processing practices, please reach out via our dedicated <a href="contact.html">Contact Us page</a>.</p>
+      
+      <h2>2. Core Architecture & Local Processing (Zero Uploads)</h2>
+      <p>Unlike traditional online converters that require users to upload sensitive files to remote cloud servers, PixelForge is engineered with a strict <strong>client-side processing architecture</strong>. When you resize, compress, crop, convert, or edit an image or PDF on PixelForge, <strong>all computational work occurs 100% locally within your device's web browser</strong> leveraging HTML5 Canvas, WebAssembly, and native JavaScript APIs.</p>
+      <p>Your uploaded files, documents, photos, and generated outputs are never transmitted over the internet, stored on any external server, or inspected by our administrators. Because files never leave your device, we maintain zero custody over your data.</p>
+      
+      <h2>3. Information We Collect</h2>
+      <p>Because our core tools operate locally without user registration, we do not collect personal identifiers such as names, email addresses, or account credentials during normal tool usage. However, to maintain site operational health, analyze performance, and support free access via advertising, we and our service vendors collect limited non-personally identifiable technical information:</p>
+      <ul>
+        <li><strong>Log & Technical Data:</strong> Standard server logs may briefly capture anonymous request diagnostics, including browser type, operating system version, referring URL, timestamp, and anonymized IP address ranges.</li>
+        <li><strong>Usage Analytics:</strong> Anonymized metrics regarding which specific utilities (e.g., Image Compression or PDF Merger) are loaded to help us prioritize engineering improvements.</li>
+      </ul>
+
+      <h2>4. Cookies & Tracking Technologies</h2>
+      <p>Cookies are small text files placed on your device to store site preferences and support third-party services. PixelForge uses essential functional cookies and third-party analytical and advertising cookies. You retain full control over cookie behavior via your browser's security preferences.</p>
+
+      <h2>5. Google AdSense & Third-Party Advertising</h2>
+      <p>To keep our suite of 30+ browser tools completely free for global users, PixelForge participates in the Google AdSense advertising network. Please note the following mandatory disclosures regarding Google advertising practices:</p>
+      <ul>
+        <li>Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to PixelForge or other websites across the internet.</li>
+        <li>Google's use of advertising cookies enables it and its network partners to serve personalized advertisements to users based on their browsing patterns on this site and other domains.</li>
+        <li>Users may opt out of personalized advertising at any time by visiting <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>.</li>
+        <li>Alternatively, users may opt out of third-party vendor cookies used for personalized advertising by visiting <a href="https://www.aboutads.info/choices" target="_blank" rel="noopener noreferrer">www.aboutads.info/choices</a> or, for European Union users, <a href="https://www.youronlinechoices.eu" target="_blank" rel="noopener noreferrer">Your Online Choices</a>.</li>
+        <li>For comprehensive details on how Google processes data when you use partner sites, review <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from sites that use its services</a>.</li>
+      </ul>
+
+      <h2>6. Analytics Disclosure</h2>
+      <p>We may utilize privacy-conscious web analytics tools (such as Google Analytics or local telemetry placeholders — TODO: verify analytical provider) to evaluate traffic flow and platform reliability. These services anonymize IP addresses where feasible and do not correlate site telemetry with personal identity.</p>
+
+      <h2>7. Your Statutory Privacy Rights (GDPR & CCPA)</h2>
+      <h3>European Union & EEA Residents (GDPR)</h3>
+      <p>Under the General Data Protection Regulation (GDPR), users located within the EEA, UK, or Switzerland hold rights regarding their personal data, including the right to access, rectify, erase, restrict processing, data portability, and object to profiling. Because PixelForge processes files locally and does not store personal profiles, data requests can typically be verified as maintaining zero stored records on our servers.</p>
+
+      <h3>California Residents (CCPA/CPRA)</h3>
+      <p>Under the California Consumer Privacy Act (CCPA), California consumers have the right to request disclosure of categories of data collected, request deletion of personal records, and opt out of the sale or sharing of personal data. PixelForge does not sell personal information to third parties.</p>
+
+      <h2>8. Children's Privacy (COPPA Compliance)</h2>
+      <p>PixelForge is a professional utility platform designed for general audiences. Our website and services are not directed toward children under the age of 13 (or 16 in certain EEA jurisdictions). We do not knowingly solicit or collect personal information from minors.</p>
+
+      <h2>9. Data Security</h2>
+      <p>We enforce strict HTTPS encryption across all web pages to ensure secure delivery of our web application scripts. Coupled with our client-side execution model, your files are protected against transit interception.</p>
+
+      <h2>10. Changes to This Privacy Policy</h2>
+      <p>We may periodically update this Privacy Policy to reflect engineering refinements or evolving legal mandates. Updated revisions will be posted on this page with an updated effective date.</p>
+
+      <h2>11. Contact Information</h2>
+      <p>If you have questions, regulatory inquiries, or feedback concerning our privacy standards, please contact our privacy compliance team via our <a href="contact.html">Contact Us form</a> or directly via email at <code>support@pixelsforge.cc</code> (TODO: confirm support email).</p>
+    </div>
+  </main>  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="24" height="24" rx="6" fill="var(--accent)"/>
+          <path d="M12 6L6 12L12 18L18 12L12 6Z" fill="#FFF"/>
+        </svg>
+        PixelForge
+      </div>
+      <p style="color:var(--text-secondary);">Professional image and PDF tools in your browser.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About</a>
+      </div>
+      <p class="footer-muted">All processing happens in your browser. We never see your images or documents.</p>
+      <p class="footer-muted" style="margin-top:1rem;">&copy; 2026 PixelForge. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
